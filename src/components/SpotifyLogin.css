@@ -1,0 +1,41 @@
+/* Spotify Login */
+/* slide up button */
+@keyframes slideInFromBottom {
+    from {
+        margin-top: 100%;
+        opacity: 0;
+    }
+
+    to {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    text-align: center;
+
+}
+
+.login-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all ease-out 0.5s;
+    animation: slideInFromBottom 1s ease-out forwards;
+}
+
+.login-button:hover {
+    color: rgb(189, 247, 198);
+    background-color: #1ed760;
+    transform: scale(1.1);
+}

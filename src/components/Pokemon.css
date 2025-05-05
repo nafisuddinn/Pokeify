@@ -1,0 +1,43 @@
+.RandomPoke {
+    position: relative;
+    max-width: 18rem;
+    padding: 0;
+    overflow: hidden;
+}
+
+.RandomPoke img {
+    width: 17rem;
+    height: 17rem;
+    display: block;
+}
+
+/* overlay panel at bottom */
+.PokeInfo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    min-height: 10rem;
+    /* limit its height */
+    overflow-y: auto;
+    /* scroll if content overflows */
+
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+
+    padding: 0.5rem;
+    box-sizing: border-box;
+
+    font-size: 0.85rem;
+    line-height: 1.2;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in, visibility 0.2s ease-out;
+}
+
+.RandomPoke:hover .PokeInfo {
+    opacity: 1;
+    visibility: visible;
+}

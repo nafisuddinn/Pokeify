@@ -5,9 +5,57 @@
   text-align: center;
 }
 
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Define slide-in keyframes, this that thing where it tells the animation sequence */
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
   }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* define a shifting gradient background */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.App h1 {
+  margin: 1.5rem 0;
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+
+  /* gradient text settings */
+  background: linear-gradient(90deg,
+      #520129,
+      #623602,
+      #40e0d0,
+      #9c004e);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* drop-shadow to help it pop on any background */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+
+  /* animation: slide in first, then keep shifting the gradient */
+  animation:
+    slideInFromTop 0.8s ease-out forwards,
+    gradientShift 4s ease infinite;
+  opacity: 0;
+  /* start hidden so slideIn can fade it in */
 }

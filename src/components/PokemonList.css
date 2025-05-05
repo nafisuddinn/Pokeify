@@ -1,0 +1,248 @@
+/* PokemonList.css */
+
+/* slide-in keyframes for each direction */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* container */
+.PokemonList {
+    position: relative;
+    width: 40rem;
+    height: 15rem;
+}
+
+/* Positioning wrappers */
+.PokemonList .TrainerWrapper,
+.PokemonList .PokemonWrapper {
+    position: absolute;
+}
+
+.PokemonList .TrainerWrapper {
+    left: 30%;
+    z-index: 1;
+}
+
+/* 2) Assign slide-in animations to each PokemonWrapper */
+.PokemonList .PokemonWrapper:nth-child(2) {
+    margin-top: 0;
+    left: -30%;
+    z-index: 3;
+    animation: slideInFromLeft 1.2s ease-out forwards;
+}
+
+.PokemonList .PokemonWrapper:nth-child(3) {
+    margin-top: -20vh;
+    left: 60%;
+    z-index: 4;
+    animation: slideInFromRight 1.2s ease-out forwards;
+}
+
+.PokemonList .PokemonWrapper:nth-child(4) {
+    margin-top: 20vh;
+    left: 0%;
+    z-index: 5;
+    animation: slideInFromLeft 1.2s ease-out forwards;
+}
+
+.PokemonList .PokemonWrapper:nth-child(5) {
+    margin-top: 0;
+    left: 90%;
+    z-index: 5;
+    animation: slideInFromRight 1.2s ease-out forwards;
+}
+
+.PokemonList .PokemonWrapper:nth-child(6) {
+    margin-top: -20vh;
+    left: 0%;
+    z-index: 4;
+    animation: slideInFromLeft 1.2s ease-out forwards;
+}
+
+.PokemonList .PokemonWrapper:nth-child(7) {
+    margin-top: 20vh;
+    left: 60%;
+    z-index: 3;
+    animation: slideInFromRight 1.2s ease-out forwards;
+}
+
+/* Hover effects */
+.PokemonList .TrainerWrapper:hover {
+    transform: scale(1.2);
+    z-index: 8;
+}
+
+.PokemonList .PokemonWrapper:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+/* generate button */
+.PokemonList .GenerateButton {
+    position: relative;
+    padding: 12px 32px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0);
+    background-size: 200% 200%;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow:
+        0 4px 12px rgba(255, 0, 128, 0.6),
+        0 4px 20px rgba(64, 224, 208, 0.4);
+    transition:
+        background-position 0.5s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    overflow: hidden;
+}
+
+.PokemonList .GenerateButton span {
+    position: relative;
+    z-index: 1;
+}
+
+.PokemonList .GenerateButton::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.4), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.PokemonList .GenerateButton:hover {
+    background-position: 100% 100%;
+    transform: scale(1.05);
+    box-shadow:
+        0 6px 18px rgba(255, 0, 128, 0.8),
+        0 6px 25px rgba(64, 224, 208, 0.6);
+}
+
+.PokemonList .GenerateButton:hover::before {
+    opacity: 1;
+}
+
+.PokemonList .GenerateButton:active {
+    transform: scale(0.95);
+    box-shadow:
+        0 2px 8px rgba(255, 0, 128, 0.4),
+        0 2px 12px rgba(64, 224, 208, 0.3);
+}
+
+/* Trainer Selector styling (unchanged) */
+.TrainerSelector {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.TrainerSelector label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    margin-right: 0.5rem;
+}
+
+.TrainerSelector select {
+    background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0);
+    background-size: 200% 200%;
+    color: rgb(15, 0, 0);
+    border: none;
+    border-radius: 30px;
+    padding: 8px 32px 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow:
+        0 4px 12px rgba(255, 0, 128, 0.6),
+        0 4px 20px rgba(64, 224, 208, 0.4);
+    transition:
+        background-position 0.5s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    appearance: none;
+}
+
+.TrainerSelector select:hover {
+    background-position: 100% 100%;
+    transform: scale(1.03);
+    box-shadow:
+        0 6px 18px rgba(255, 0, 128, 0.8),
+        0 6px 25px rgba(64, 224, 208, 0.6);
+}
+
+.TrainerSelector select:active {
+    transform: scale(0.95);
+    box-shadow:
+        0 2px 8px rgba(255, 0, 128, 0.4),
+        0 2px 12px rgba(64, 224, 208, 0.3);
+}
+
+.TrainerSelector select:focus {
+    outline: none;
+}
+
+.TrainerSelector::after {
+    content: '▾';
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #fff;
+    pointer-events: none;
+}
