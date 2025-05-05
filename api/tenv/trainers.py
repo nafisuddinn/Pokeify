@@ -1,0 +1,22 @@
+character_sprites = [
+            "https://archives.bulbagarden.net/media/upload/f/fd/Spr_HGSS_Blue.png",
+            "https://archives.bulbagarden.net/media/upload/e/e8/Spr_HGSS_Red.png",
+            "https://archives.bulbagarden.net/media/upload/d/d5/Spr_Pt_Barry.png",
+            "https://archives.bulbagarden.net/media/upload/8/83/Spr_B2W2_Cynthia.png",
+            "https://archives.bulbagarden.net/media/upload/c/cd/Spr_B2W2_Nate.png",
+            "https://archives.bulbagarden.net/media/upload/b/b7/Spr_B2W2_Hilda_2.png",
+            "https://archives.bulbagarden.net/media/upload/b/b5/Spr_B2W2_Rosa.png",
+            "https://archives.bulbagarden.net/media/upload/a/a0/Spr_B2W2_Hilbert.png",
+            "https://archives.bulbagarden.net/media/upload/6/6b/Spr_Pt_Lucas.png",
+            "https://archives.bulbagarden.net/media/upload/d/d6/Spr_Pt_Dawn.png",
+            "https://archives.bulbagarden.net/media/upload/0/03/FRLG_Leaf_Intro.png",
+            "https://archives.bulbagarden.net/media/upload/a/a5/Spr_HGSS_Ethan.png",
+            "https://archives.bulbagarden.net/media/upload/2/2f/Spr_HGSS_Lyra.png",
+            "https://archives.bulbagarden.net/media/upload/e/e6/Spr_E_Brendan.png",
+            "https://archives.bulbagarden.net/media/upload/a/a4/Spr_E_May.png",
+            "https://archives.bulbagarden.net/media/upload/a/ae/Spr_B2W2_Lance.png",
+            "https://archives.bulbagarden.net/media/upload/4/42/Spr_B2W2_Steven.png",
+            "https://archives.bulbagarden.net/media/upload/a/a0/Spr_BW_N.png",
+            "https://archives.bulbagarden.net/media/upload/9/9d/Spr_DP_Lucas.png",
+            "https://archives.bulbagarden.net/media/upload/0/00/Spr_DP_Dawn.png"  
+        ]
