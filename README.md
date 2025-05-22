@@ -1,3 +1,8 @@
+PROJECT DEVELOPERS:
+
+Backend Logic: Nafis Uddin & Arti Hajdari
+Front End Logic: Wilson Zhu, Rafi Hossain, Miadul Haque, & Jesiah Gilbert
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
